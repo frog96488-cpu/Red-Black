@@ -1,0 +1,251 @@
+```css
+/* ============================= */
+/* CONFIGURACIÓN GENERAL */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+
+/* ============================= */
+/* ENCABEZADO */
+/* ============================= */
+
+header {
+    background-color: #111111;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+
+/* ============================= */
+/* NAVEGACIÓN */
+/* ============================= */
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d62828;
+}
+
+
+/* ============================= */
+/* CONTENIDO PRINCIPAL */
+/* ============================= */
+
+main {
+    width: 84%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ============================= */
+/* PRESENTACIÓN */
+/* ============================= */
+
+main > section:first-child {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 80px 0;
+}
+
+main > section:first-child h2 {
+    font-size: 60px;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+main > section:first-child p {
+    font-size: 20px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+main > section:first-child a {
+    display: inline-block;
+
+    width: fit-content;
+
+    background-color: #d62828;
+    color: white;
+
+    padding: 12px 25px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+main > section:first-child a:hover {
+    background-color: #a51f1f;
+    transform: translateY(-2px);
+}
+
+
+/* ============================= */
+/* SECCIONES */
+/* ============================= */
+
+main > section {
+    padding: 80px 0;
+}
+
+main > section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+
+/* ============================= */
+/* PROYECTOS */
+/* ============================= */
+
+main > section:nth-child(2) {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+main > section:nth-child(2) h2 {
+    grid-column: 1 / -1;
+}
+
+article {
+    background-color: white;
+
+    padding: 30px;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+article h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+article p {
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+article a {
+    color: #d62828;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+
+/* ============================= */
+/* DESTACADOS */
+/* ============================= */
+
+main > section:nth-child(3) article {
+    max-width: 600px;
+}
+
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer {
+    background-color: #111111;
+    color: #aaaaaa;
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 50px;
+}
+
+
+/* ============================= */
+/* DISEÑO RESPONSIVO */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main > section:first-child h2 {
+        font-size: 42px;
+    }
+
+    main > section:nth-child(2) {
+        grid-template-columns: 1fr;
+    }
+
+}
+```
